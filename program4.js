@@ -19,7 +19,6 @@ fs.readFile(file, function done(error, buffer) {
         //Print lines count
         console.log(lines.length - 1);
     } else {
-        console.log(error);
+        console.error(error);
     }
-
 });
