@@ -14,4 +14,5 @@ content = buffer.toString();
 //Split content into Array
 lines = content.split('\n');
 
+//Print lines count
 console.log(lines.length - 1);
