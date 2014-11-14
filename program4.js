@@ -3,7 +3,7 @@ var fs = require('fs'),
     file = process.argv[2];
 
 //Read Binary file data
-fs.readFileSync(file, function done(error, buffer) {
+fs.readFile(file, function done(error, buffer) {
     'use strict';
 
     var content,
