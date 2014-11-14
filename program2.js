@@ -5,6 +5,8 @@ var argv = process.argv,
 
 for (i = 2; i <= argv.length; i += 1) {
     sum = sum + Number(argv[i]);
+
+    console.log(argv[i]);
 }
 
 console.log(sum);
