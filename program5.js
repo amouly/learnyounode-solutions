@@ -2,7 +2,7 @@
 var fs = require('fs'),
     ph = require('path'),
     path = process.argv[2],
-    ext = process.argv[3];
+    ext = "." + process.argv[3];
 
 //Read directory
 fs.readdir(path, function done(error, list) {
@@ -10,9 +10,8 @@ fs.readdir(path, function done(error, list) {
 
     var i;
 
+    //For ech File
     for (i = 0; i < list.length; i += 1) {
-
-        console.log(list[i] + " - " + ph.extname(list[i]));
 
         //If current file has extension
         if (ph.extname(list[i]) === ext) {
