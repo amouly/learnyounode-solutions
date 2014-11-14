@@ -12,7 +12,7 @@ fs.readdir(path, function done(error, list) {
 
     for (i = 0; i < list.length; i += 1) {
 
-        console.log(list[i]);
+        console.log(list[i] + " - " + ph.extname(list[i]));
 
         //If current file has extension
         if (ph.extname(list[i]) === ext) {
