@@ -3,7 +3,7 @@ var argv = process.argv,
     sum;
 
 for(i = 2; i <= argv.length; i++){
-    sum += argv[i];
+    sum += Number(argv[i]);
 }
 
 console.log(sum);
