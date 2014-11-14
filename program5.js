@@ -12,6 +12,8 @@ fs.readdir(path, function done(error, list) {
 
     for (i = 0; i < list.length; i += 1) {
 
+        console.log(list[i]);
+
         //If current file has extension
         if (ph.extname(list[i]) === ext) {
             console.log(list[i]);
