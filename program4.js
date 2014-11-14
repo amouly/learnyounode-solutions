@@ -1,14 +1,15 @@
 /*globals console,process,require*/
 var fs = require('fs'),
-    file = process.argv[2],
-    content,
-    lines;
+    file = process.argv[2];
 
 //Read Binary file data
 fs.readFile(file, function done(error, buffer) {
     'use strict';
 
-    if (error) {
+    var content,
+        lines;
+
+    if (!error) {
         //File content as String
         content = buffer.toString();
 
