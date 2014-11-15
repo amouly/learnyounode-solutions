@@ -7,7 +7,7 @@ http.get(url, function done(response) {
     'use strict';
 
     response.pipe(bl(function (err, data) {
-        console.log(bl.length);
+        console.log(data.length);
         console.log(data.toString());
     }));
 });
