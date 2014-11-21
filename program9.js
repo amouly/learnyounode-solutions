@@ -8,9 +8,14 @@ urls.forEach(function (url, index) {
     'use strict';
 
     http.get(url, function done(response) {
-        response.on("data", function (data) {
+
+        response.pipe(bl(function (err, data) {
+            if (err) {
+                return console.error(err);
+            }
+
             finalData += data;
-        });
+        }));
     });
 });
 
