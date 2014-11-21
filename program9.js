@@ -9,13 +9,12 @@ urls.forEach(function (url, index) {
 
     http.get(url, function done(response) {
 
-
         response.pipe(bl(function (err, data) {
             if (err) {
                 return console.error(err);
             }
 
-            buffer.append(response);
+            buffer.append(data);
         }));
     });
 
