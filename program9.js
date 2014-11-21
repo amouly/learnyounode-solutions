@@ -10,6 +10,8 @@ urls.forEach(function (url, index) {
     http.get(url, function done(response) {
         response.on("data", function (data) {
             finalData += data;
+
+            console.log(finalData);
         });
     });
 });
