@@ -2,7 +2,7 @@
 var bl = require('bl'),
     http = require('http'),
     urls = [process.argv[2], process.argv[3], process.argv[4]],
-    finalData;
+    finalData = "";
 
 urls.forEach(function (url, index) {
     'use strict';
@@ -10,8 +10,6 @@ urls.forEach(function (url, index) {
     http.get(url, function done(response) {
         response.on("data", function (data) {
             finalData += data;
-
-            console.log(finalData);
         });
     });
 });
