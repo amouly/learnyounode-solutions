@@ -17,8 +17,6 @@ urls.forEach(function (url, index) {
             buffer.append(data);
         }));
     });
-
-
 });
 
 console.log(buffer.toString());
